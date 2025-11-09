@@ -157,3 +157,5 @@
               (begin
                 (set-box! a 2)
                 (f 10))))))
+
+(define ex6 (parse '(let f (let b (box 0) (lambda x (begin (set-box! b (+ 1 (unbox b))) (unbox b)))) (begin e (f 0)))))
